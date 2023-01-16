@@ -1,7 +1,7 @@
 
 # Git_Project
 
-this project provides the  specific facts about a local git repository
+This project provides the  specific facts about a local git repository
 
 
 
