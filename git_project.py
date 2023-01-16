@@ -16,7 +16,7 @@ class GitRepo:
             sys.exit(1)
 
     def get_path(self):
-        parser = argparse.ArgumentParser(description ='Print Specific Facts about the Local Git Directory')
+        parser = argparse.ArgumentParser(description ='Prints Specific Facts about the Local Git Directory')
         parser.add_argument('--git_dir', type=str, required=True, metavar='', help='path of the local git directory')
         args = parser.parse_args()
         git_dir = args.git_dir
@@ -46,10 +46,10 @@ class GitRepo:
         return author == user
 
     def display_details(self):
-        print("active branch : ",self.get_active_branch())
+        print("active branch: ",self.get_active_branch())
         print("local changes: ",self.is_modified())
-        print("recent_commit : ",self.is_head_commit_with_in_days())
-        print("blame Rufus : ",self.is_head_commit_by_user())
+        print("recent_commit: ",self.is_head_commit_with_in_days())
+        print("blame Rufus: ",self.is_head_commit_by_user())
 
 
 

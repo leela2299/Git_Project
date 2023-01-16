@@ -29,4 +29,12 @@ via command line interface
 
 
 
+## Sample Output
+
+```
+active branch:  main
+local changes:  True
+recent_commit:  True
+blame Rufus:  False
+```
 
