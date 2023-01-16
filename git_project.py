@@ -1,5 +1,6 @@
 from git import Repo
 import datetime
+import argparse
 
 class GitRepo:
 
@@ -27,7 +28,15 @@ class GitRepo:
         author = str(self.repo.head.object.author)
         return author == "Rufus"
 
-git_dir = input("Enter the path of Local Git Directory : ")
+
+parser = argparse.ArgumentParser(description ='Print Specific Facts about the Local Git Directory')
+parser.add_argument('--git_dir', type=str, required=True, metavar='', help='path of the local git directory')
+args = parser.parse_args()
+git_dir = args.git_dir
+
+
+
+
 repo = GitRepo(git_dir)
 print("active branch : ",repo.get_active_branch())
 print("local changes: ",repo.is_modified())
