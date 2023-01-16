@@ -24,8 +24,9 @@ This project provides the  specific facts about a local git repository
 To run this project, provide the path of local git directory
 via command line interface
 
-`python git_project.py --git_dir ./path/git_dir`
-
+```bash
+  `python git_project.py --git_dir ./path/git_dir`
+```
 
 
 
