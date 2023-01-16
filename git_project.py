@@ -12,7 +12,8 @@ class GitRepo:
         
     
     def is_modified(self):
-        # returns true if the repository files are modified and uncommited 
+        # Returns true if the repository files are modified and uncommited
+        #  
         changed = [item.a_path for item in self.repo.index.diff(None)]
         return len(changed)>0
 
